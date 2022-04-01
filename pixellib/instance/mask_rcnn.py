@@ -2283,7 +2283,7 @@ class MaskRCNN(object):
         self.checkpoint_path = os.path.join(self.save_directory, self.model_name)
 
         callb = [
-            ModelCheckpoint(self.checkpoint_path,save_weights_only=True,save_best_only = True, monitor = "val_loss", verbose = 0), 
+            ModelCheckpoint(self.checkpoint_path,save_weights_only=False,save_best_only = True, monitor = "val_loss", verbose = 0), 
             lr_rate ,
      
         ] 
